@@ -1,0 +1,4 @@
+add new thing:
+-merge main onto your branch
+-do stuff
+-if everything is good and someone aproves merge onto main
