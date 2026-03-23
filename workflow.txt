@@ -1,4 +1,10 @@
-add new thing:
+how to add new thing:
+-go into main
+-update project
+-go into your branch
 -merge main onto your branch
--do stuff
--if everything is good and someone aproves merge onto main
+-do stuff (commit and push everything)
+-if everything is good and someone aproves merge onto main:
+--go into main
+--merge your branch into main
+--push
