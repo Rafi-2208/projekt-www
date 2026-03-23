@@ -4,7 +4,8 @@ how to add new thing:
 -go into your branch
 -merge main onto your branch
 -do stuff (commit and push everything)
--if everything is good and someone aproves merge onto main:
+-if everything is good and someone aproves:
 --go into main
+--update project
 --merge your branch into main
 --push
