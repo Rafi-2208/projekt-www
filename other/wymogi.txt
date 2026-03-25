@@ -2,3 +2,5 @@
 -formulaż (walidacja) (5-8 pól)
 -zasadu uzytecznosci i dostepnsoci
 -WCAG
+
+-(mozna 2 jezyki / dark/light mode)
