@@ -1,0 +1,4 @@
+-Single page application.
+-formulaż (walidacja) (5-8 pól)
+-zasadu uzytecznosci i dostepnsoci
+-WCAG
