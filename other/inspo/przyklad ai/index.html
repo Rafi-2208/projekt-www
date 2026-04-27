@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bieg Piotrkowską dla Schroniska | Łódź 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Menu główne">
+  <div class="nav-container">
+    <div class="logo">Bieg Piotrkowską 🐾</div>
+    <ul class="nav-links">
+      <li><a href="#home" data-i18n="nav_home">Start</a></li>
+      <li><a href="#about" data-i18n="nav_about">O biegu</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Podopieczni</a></li>
+      <li><a href="#register" data-i18n="nav_register">Rejestracja</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+      <li class="nav-controls">
+        <button id="lang-toggle" class="btn-theme">PL | EN</button>
+        <button id="theme-toggle" class="btn-theme" aria-label="Przełącz tryb kolorystyczny">🌙</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <section id="home" class="card hero">
+    <span class="badge" data-i18n="hero_badge">Łódź • 2025</span>
+    <h1 data-i18n="hero_title">Biegnij dla łódzkiego schroniska!</h1>
+    <p data-i18n="hero_desc">Ulica Piotrkowska zamieni się w trasę pełną serca. Każdy kilometr to realna pomoc, pełna miska i opieka medyczna dla bezdomnych zwierząt.</p>
+    <div class="hero-actions">
+      <a href="#register" class="btn-primary" data-i18n="hero_btn_reg">Zapisz się na bieg</a>
+      <a href="#about" class="btn-secondary-outline" data-i18n="hero_btn_details">Szczegóły trasy</a>
+    </div>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat-item">
+      <span class="stat-number">20 zł</span>
+      <span class="stat-label" data-i18n="stat_fee">Opłata startowa</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">4.2 km</span>
+      <span class="stat-label" data-i18n="stat_dist">Dystans trasy</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label" data-i18n="stat_charity">Na schronisko</span>
+    </div>
+  </div>
+
+  <section id="about" class="card">
+    <h2 data-i18n="about_title">O wydarzeniu</h2>
+    <div class="content-text">
+      <p data-i18n="about_desc">Projekt zakłada organizację biegu, którego celem jest wsparcie łódzkiego schroniska. Trasa wiedzie przez najpiękniejsze zakątki ulicy Piotrkowskiej.</p>
+      <ul class="info-list">
+        <li data-i18n="about_li1">Profesjonalny pomiar czasu i numer startowy.</li>
+        <li data-i18n="about_li2">Medal dla każdego, kto ukończy bieg.</li>
+        <li data-i18n="about_li3">Możliwość startu z własnym psem.</li>
+        <li data-i18n="about_li4">Woda i zdrowe przekąski na mecie.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="card">
+    <h2 data-i18n="gallery_title">Nasi podopieczni</h2>
+    <p class="section-desc" data-i18n="gallery_desc">Poznaj zwierzaki, dla których biegniemy w tej edycji.</p>
+    <div class="gallery-grid">
+      <article class="animal-card">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Pies Burek">
+        <div class="animal-info">
+          <h3>Burek</h3>
+          <p data-i18n="animal_burek">Wesoły psiak, który uwielbia towarzystwo ludzi.</p>
+        </div>
+      </article>
+      <article class="animal-card">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Kotka Luna">
+        <div class="animal-info">
+          <h3>Luna</h3>
+          <p data-i18n="animal_luna">Spokojna kotka, idealna do mieszkania w bloku.</p>
+        </div>
+      </article>
+      <article class="animal-card">
+        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=500&q=80" alt="Pies Max">
+        <div class="animal-info">
+          <h3>Max</h3>
+          <p data-i18n="animal_max">Energiczny terrier, marzy o biegowych treningach.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="register" class="card">
+    <h2 data-i18n="reg_title">Zarejestruj się</h2>
+    <div id="form-status" class="alert hidden" role="alert"></div>
+
+    <form id="registrationForm" novalidate>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="firstName" data-i18n="form_fname">Imię</label>
+          <input type="text" id="firstName" name="firstName" placeholder="np. Jan" required>
+          <span class="error-msg" id="error-firstName"></span>
+        </div>
+        <div class="form-group">
+          <label for="lastName" data-i18n="form_lname">Nazwisko</label>
+          <input type="text" id="lastName" name="lastName" placeholder="np. Kowalski" required>
+          <span class="error-msg" id="error-lastName"></span>
+        </div>
+        <div class="form-group">
+          <label for="email" data-i18n="form_email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="jan@example.pl" required>
+          <span class="error-msg" id="error-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone" data-i18n="form_phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" placeholder="9 cyfr" required>
+          <span class="error-msg" id="error-phone"></span>
+        </div>
+        <div class="form-group full-width">
+          <label for="pesel" data-i18n="form_pesel">PESEL</label>
+          <input type="text" id="pesel" name="pesel" placeholder="11 cyfr" required maxlength="11">
+          <span class="error-msg" id="error-pesel"></span>
+        </div>
+        <div class="form-group full-width checkbox-group">
+          <input type="checkbox" id="agreement" name="agreement" required>
+          <label for="agreement" data-i18n="form_agree">Akceptuję regulamin biegu i deklaruję opłatę startową 20 zł.</label>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit" id="submitBtn" data-i18n="form_submit">Wyślij zgłoszenie</button>
+    </form>
+  </section>
+
+  <section id="contact" class="card">
+    <h2 data-i18n="cont_title">Kontakt</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong data-i18n="cont_office">Biuro Organizatora</strong>
+            <p>ul. Piotrkowska 104, 90-001 Łódź</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong data-i18n="cont_write">Napisz do nas</strong>
+            <p>kontakt@bieglodz.pl</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <strong data-i18n="cont_call">Zadzwoń</strong>
+            <p data-i18n="cont_hours">+48 123 456 789 (pn-pt 9:00-17:00)</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-social">
+        <p data-i18n="cont_social">Obserwuj nasze przygotowania:</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">Facebook</a>
+          <a href="#" class="social-btn">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2025 Projektowanie interfejsów aplikacji www</p>
+  <p><span data-i18n="foot_authors">Autorzy:</span> Krzysztof Kubiak, Rafał Mamenas, Oskar Tomaszewski</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
